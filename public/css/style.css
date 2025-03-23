@@ -1,0 +1,10 @@
+
+  .success {
+    background: #28a745;
+    color: #fff;
+  }
+  
+  .error {
+    background: #dc3545;
+    color: #fff;
+  }

@@ -1,0 +1,43 @@
+<%- include('../partials/header.ejs')%>
+<link rel="stylesheet" href="/css/newconnection_styles.css">
+
+<div class="content">
+    <form action="/events" method="post" enctype="multipart/form-data">
+    <h2 class="form-heading">Book a New Event</h2>
+
+    <label for="sporttype">Choose sport type:</label>
+        <select name="sporttype" id="sporttype" required>
+        <option value="">--Choose sport type--</option>
+        <option value="ICC Tournaments">ICC Tournaments</option>
+        <option value="Leagues">Leagues</option>
+        <option value="Domestic Cricket">Domestic Cricket</option>
+        <option value="Youth Cricket">Youth Cricket</option>
+        <option value="Recreational and Informal Cricket">Recreational and Informal Cricket</option>
+        </select><br><br>
+
+    <label id="team-label">Team-Name:</label>
+    <input type="text" id="title" name="title" aria-labelledby="team-label" required><br>
+
+    <label id="details-label">Details:</label>
+    <textarea id="details" name="details" rows="2" aria-labelledby="details-label" required></textarea><br>
+
+    <!-- <label for="name">Host Name:
+    <input type="text" id="name" name="name" required><br><br></label> -->
+
+    <label id="where-label">Where:</label>
+    <input type="text" id="where" name="where" aria-labelledby="where-label" required><br>
+
+    <label id="start-time-label">Start Time:</label>
+    <input type="datetime-local" id="starttime" name="starttime" aria-labelledby="start-time-label" required><br>
+
+    <label id="end-time-label">End Time:</label>
+    <input type="datetime-local" id="endtime" name="endtime" aria-labelledby="end-time-label" required><br>
+
+    <label id="image-label">Photo ID:</label>
+    <input type="file" id="image" name="image" aria-labelledby="image-label" accept="image/*" required>
+	
+    <button type="submit" class="Sbutton">Submit</button>
+</form>
+</div>
+
+<%- include('../partials/footer.ejs')%>

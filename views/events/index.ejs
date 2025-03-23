@@ -1,0 +1,17 @@
+<%- include('../partials/header.ejs')%>
+<link rel="stylesheet" href="/css/connections_styles.css">
+
+<div class="content">
+    <% const sporttypes = [...new Set(events.map(event => event.sporttype))]; %>
+    <% sporttypes.forEach(sporttype => { %>
+        <h3><b><%= sporttype %></b></h3>
+        <% events.forEach(event =>{
+            if(event.sporttype === sporttype){%>
+                <p><a href="/events/<%= event.id %>"><em> <%= event.title%></em></a><br></p>
+           <% }
+        })
+    })%>
+  </div>
+
+
+<%- include('../partials/footer.ejs')%>
